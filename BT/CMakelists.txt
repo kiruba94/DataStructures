@@ -1,0 +1,22 @@
+cmake_minimum_required(VERSION 3.8)
+set(This MainProject)
+project(${This} C CXX)
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_POSITION_INDEPENDENT_CODE ON)
+enable_testing()
+
+add_subdirectory(googletest)
+
+set(Headers
+    node.hh
+)
+set(Sources
+    DFS_traversal.cpp    
+    BFS_traversal.cpp
+    TreeSearch.cpp
+    TreeSum.cpp
+)
+
+add_library(${This} STATIC ${Sources} ${Headers})
+
+add_subdirectory(test)

@@ -1,0 +1,3 @@
+[submodule "BT/googletest"]
+	path = BT/googletest
+	url = https://github.com/google/googletest
