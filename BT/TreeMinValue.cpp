@@ -1,3 +1,5 @@
+#ifndef TREE_MINVALUE
+#define TREE_MINVALUE
 #include "node.hh"
 #include <limits>
 #include <algorithm>
@@ -13,3 +15,4 @@ int TreeMin_DFS(node<int> *root)
     const int right_min = TreeMin_DFS(root->right);
     return min({root->val, left_min, right_min});
 }
+#endif

@@ -16,6 +16,7 @@ set(Sources
     TreeSearch.cpp
     TreeSum.cpp
     TreeMinValue.cpp
+    MaxRootToLeafPathSum.cpp
 )
 
 add_library(${This} STATIC ${Sources} ${Headers})

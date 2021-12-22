@@ -8,6 +8,7 @@ set(Sources
     testTreeSearch.cpp
     testTreeSum.cpp
     testTreeMinValue.cpp
+    testMaxRootToLeafPathSum.cpp
 )
 
 add_executable(${This} ${Sources})
