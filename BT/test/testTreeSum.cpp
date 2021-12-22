@@ -1,15 +1,16 @@
-#include<gtest/gtest.h>
-#include"../TreeSum.cpp"
+#include <gtest/gtest.h>
+#include "../TreeSum.cpp"
 
-TEST(test_TreeSum,Test1){
-    node<int>* a = new node<int>(1);
-    node<int>* b = new node<int>(2);
-    node<int>* c = new node<int>(5);
-    node<int>* d = new node<int>(7);
-    node<int>* e = new node<int>(9);
-    node<int>* f = new node<int>(11);
-    node<int>* g = new node<int>(15);
-    node<int>* h = new node<int>(27);
+TEST(test_TreeSum, Test1)
+{
+    node<int> *a = new node<int>(1);
+    node<int> *b = new node<int>(2);
+    node<int> *c = new node<int>(5);
+    node<int> *d = new node<int>(7);
+    node<int> *e = new node<int>(9);
+    node<int> *f = new node<int>(11);
+    node<int> *g = new node<int>(15);
+    node<int> *h = new node<int>(27);
     /*
             1
            / \
@@ -19,21 +20,26 @@ TEST(test_TreeSum,Test1){
                   \
                   27
     */
-   a->left = b;
-   a->right = c;
-   b->left = d;
-   b->right = e;
-   c->left = f;
-   c->right = g;
-   g->right = h;
+    a->left = b;
+    a->right = c;
+    b->left = d;
+    b->right = e;
+    c->left = f;
+    c->right = g;
+    g->right = h;
 
-   EXPECT_EQ(TreeSum_DFS(a),77);
-   EXPECT_EQ(TreeSum_DFS(b),18);
-   EXPECT_EQ(TreeSum_DFS(g),42);
-   EXPECT_EQ(TreeSum_DFS(e),9);
-   node<int>* nullNode = nullptr;
-   EXPECT_EQ(TreeSum_DFS(nullNode),0);
+    node<int> *nullNode = nullptr;
+    //test DFS tree sum
+    EXPECT_EQ(TreeSum_DFS(a), 77);
+    EXPECT_EQ(TreeSum_DFS(b), 18);
+    EXPECT_EQ(TreeSum_DFS(g), 42);
+    EXPECT_EQ(TreeSum_DFS(e), 9);
+    EXPECT_EQ(TreeSum_DFS(nullNode), 0);
 
-
-
+    //test BFS tree sum
+    EXPECT_EQ(TreeSum_BFS(a), 77);
+    EXPECT_EQ(TreeSum_BFS(b), 18);
+    EXPECT_EQ(TreeSum_BFS(g), 42);
+    EXPECT_EQ(TreeSum_BFS(e), 9);
+    EXPECT_EQ(TreeSum_BFS(nullNode), 0);
 }

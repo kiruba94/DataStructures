@@ -33,6 +33,7 @@
 
 #remove build directory
 /BT/build/*
+/build
 #remove BT1
 BT1
 BT1.cpp
