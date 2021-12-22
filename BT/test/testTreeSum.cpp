@@ -27,12 +27,12 @@ TEST(test_TreeSum,Test1){
    c->right = g;
    g->right = h;
 
-   EXPECT_EQ(TreeSum(a),77);
-   EXPECT_EQ(TreeSum(b),18);
-   EXPECT_EQ(TreeSum(g),42);
-   EXPECT_EQ(TreeSum(e),9);
+   EXPECT_EQ(TreeSum_DFS(a),77);
+   EXPECT_EQ(TreeSum_DFS(b),18);
+   EXPECT_EQ(TreeSum_DFS(g),42);
+   EXPECT_EQ(TreeSum_DFS(e),9);
    node<int>* nullNode = nullptr;
-   EXPECT_EQ(TreeSum(nullNode),0);
+   EXPECT_EQ(TreeSum_DFS(nullNode),0);
 
 
 

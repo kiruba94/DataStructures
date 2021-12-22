@@ -30,3 +30,11 @@
 *.exe
 *.out
 *.app
+
+#remove build directory
+/BT/build/*
+#remove BT1
+BT1
+BT1.cpp
+*.json
+
