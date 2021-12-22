@@ -7,6 +7,7 @@ set(Sources
     testBFS_traversal.cpp
     testTreeSearch.cpp
     testTreeSum.cpp
+    testTreeMinValue.cpp
 )
 
 add_executable(${This} ${Sources})
